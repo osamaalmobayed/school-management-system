@@ -1,0 +1,17 @@
+///// 1 ////
+admin@gmail.com
+p@ssw0rd
+
+///// 2 ////
+
+Teacher3@gmail.com
+123123123
+
+///// 3 ////
+parent@yahoo.com
+12345678
+
+///// 4 ////
+Student4@gmail.com
+123123123
+  
