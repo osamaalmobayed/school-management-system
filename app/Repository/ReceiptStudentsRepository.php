@@ -85,7 +85,7 @@ class ReceiptStudentsRepository implements ReceiptStudentsRepositoryInterface
         DB::beginTransaction();
 
         try {
-            // تعديل البيانات في جدول سندات القبض
+            // التعديل في جدول سندات القبض
             $receipt_students = ReceiptStudent::findorfail($request->id);
             $receipt_students->date = date('Y-m-d');
             $receipt_students->student_id = $request->student_id;
@@ -93,7 +93,7 @@ class ReceiptStudentsRepository implements ReceiptStudentsRepositoryInterface
             $receipt_students->description = $request->description;
             $receipt_students->save();
 
-            // تعديل البيانات في جدول الصندوق
+            // التعديل في جدول الصندوق
             $fund_accounts = FundAccount::where('receipt_id',$request->id)->first();
             $fund_accounts->date = date('Y-m-d');
             $fund_accounts->receipt_id = $receipt_students->id;
