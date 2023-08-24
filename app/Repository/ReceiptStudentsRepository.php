@@ -102,7 +102,7 @@ class ReceiptStudentsRepository implements ReceiptStudentsRepositoryInterface
             $fund_accounts->description = $request->description;
             $fund_accounts->save();
 
-            // تعديل البيانات في جدول الصندوق
+            // تعديل البيانات في جدول حساب الطالب
 
             $fund_accounts = StudentAccount::where('receipt_id',$request->id)->first();
             $fund_accounts->date = date('Y-m-d');
